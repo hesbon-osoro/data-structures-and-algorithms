@@ -1,0 +1,15 @@
+{
+  "name": "data-structures-and-algorithms",
+  "version": "1.0.0",
+  "description": "Data Structures and Algorithms repo",
+  "main": "index.js",
+  "author": "Hesbon Osoro <hesbonosoro1@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "format": "prettier --write ."
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "prettier": "^2.7.1"
+  }
+}
