@@ -38,8 +38,28 @@ const treeSum = root => {
   return sum;
 };
 
-treeSum(a); // -> 21
-
+console.log(treeSum(a)); // -> 21
+// Short DFS
+const treeSumShortDFS = root => {
+  if (root === null) return 0;
+  return root.val + treeSum(root.left) + treeSum(root.right);
+};
+console.log(`Short DFS:`);
+console.log(treeSumShortDFS(a)); // -> 21`)
+const treeSumBFS = root => {
+  let sum = 0;
+  if (root === null) return sum;
+  let queue = [root];
+  while (queue.length) {
+    let current = queue.shift();
+    if (current.left) queue.push(current.left);
+    if (current.right) queue.push(current.right);
+    sum += current.val;
+  }
+  return sum;
+};
+console.log(`BFS:`);
+console.log(treeSumBFS(a)); // -> 21
 module.exports = {
   treeSum,
 };
