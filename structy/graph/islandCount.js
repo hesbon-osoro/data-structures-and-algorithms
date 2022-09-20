@@ -3,8 +3,6 @@ island count
 Write a function, islandCount, that takes in a grid containing Ws and Ls. W represents water and L represents land. The function should return the number of islands on the grid. An island is a vertically or horizontally connected region of land.
 */
 const islandCount = grid => {
-  const { length: rows } = grid;
-  const { length: cols } = grid[0];
   const visited = new Set();
   let count = 0;
   for (let row = 0; row < grid.length; row++) {
