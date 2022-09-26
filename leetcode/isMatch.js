@@ -4,5 +4,5 @@
  * @return {boolean}
  */
 const isMatch = function (s, p) {
-  return new RegExp(`^${p}$`);
+  return new RegExp(`^${p}$`).test(s);
 };
