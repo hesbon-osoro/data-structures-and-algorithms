@@ -36,3 +36,10 @@ const findTarget = function (root, k) {
 //     };
 //     return dfs(root) || false;
 // }
+// hash map
+// const findTarget = function (root, k, map = {}) {
+//   if (!root) return false;
+//   if (map[k - root.val]) return true;
+//   map[root.val] = true;
+//   return findTarget(root.left, k, map) || findTarget(root.right, k, map);
+// };
