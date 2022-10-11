@@ -1,14 +1,9 @@
-var climbStairs = function (n) {
-  return factorial(n) / (factorial(2) * factorial(n - 2));
+const climbStairs = function (n) {
+  if (memo.has(n)) return memo.get(n);
+  memo.set(n, climbStairs(n - 1) + climbStairs(n - 2));
+  return memo.get(n);
 };
 
-const factorial = n => {
-  let fact = 1;
-  for (let i = 1; i <= n; i++) {
-    fact *= i;
-  }
-  return fact;
-};
-let n = 2,
-  r = 2;
-console.log(factorial(n) / (factorial(r) * factorial(n - r)));
+const memo = new Map();
+
+for (let n = 0; n < 4; n++) memo.set(n, n);
