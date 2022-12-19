@@ -5,7 +5,7 @@
  * @param {number} destination
  * @return {boolean}
  */
-var validPath = function (n, edges, source, destination) {
+const validPath = function (n, edges, source, destination) {
   // Initialize a map from each vertex to its neighboring vertices
   let map = new Map();
   edges.forEach(edge => {
