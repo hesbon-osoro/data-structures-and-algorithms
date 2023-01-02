@@ -1,4 +1,8 @@
-var detectCapitalUse = function (word) {
+/**
+ * @param {string} word
+ * @return {boolean}
+ */
+const detectCapitalUse = function (word) {
   return (
     word.toUpperCase() === word ||
     word.toLowerCase() === word ||
