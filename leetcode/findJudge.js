@@ -1,3 +1,8 @@
+/**
+ * @param {number} n
+ * @param {number[][]} trust
+ * @return {number}
+ */
 function findJudge(n, trust) {
   if (n == 1) return n;
 
